@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "mguazzardo/curso-jenkins"
+    registry = "gitdemis/curso-jenkins"
     registryCredential = 'dockerhub'
   }
  agent any
@@ -9,7 +9,7 @@ pipeline {
     stage('Build Docker Image') {
             steps {
                 script {
-                    app = docker.build("mguazzardo/flaskapi:latest")
+                    app = docker.build("gitdemis/flaskapi:latest")
                 }
             }
         }
